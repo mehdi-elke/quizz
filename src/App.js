@@ -35,7 +35,7 @@ export default function App() {
 				{ answerText: '1', isCorrect: false },
 				{ answerText: '4', isCorrect: false },
 				{ answerText: '6', isCorrect: false },
-				{ answerText: '7', isCorrect: true },
+				{ answerText: '4', isCorrect: true },
 			],
 		},
 	];
