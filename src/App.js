@@ -24,7 +24,7 @@ export default function App() {
 			questionText: 'The iPhone was created by which company?',
 			answerOptions: [
 				{ answerText: 'Apple', isCorrect: true },
-				{ answerText: 'Intel', isCorrect: false },
+				{ answerText: 'Google', isCorrect: false },
 				{ answerText: 'Amazon', isCorrect: false },
 				{ answerText: 'Microsoft', isCorrect: false },
 			],
