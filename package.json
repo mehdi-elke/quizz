@@ -2,7 +2,7 @@
   "name": "quizz-app",
   "version": "0.0.1",
   "private": true,
-  "homepage": "https://mehdi-elk.github.io/<project>/",
+  "homepage": "https://mehdi-elke.github.io/quizz/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
