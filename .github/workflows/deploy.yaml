@@ -1,29 +1,25 @@
+name: Deploy GH Pages
 
-name: Build & deploy
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
+on: push
 
 jobs:
-  deploy:
-    name: Deploying to Github Pages
-
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout branch
+      - name: Checkout 🛎️
         uses: actions/checkout@v2
-
-      - name: Authorizing Github action
         with:
-          token: "${{ secrets.GITHUB_TOKEN }}"
-        uses: oleksiyrudenko/gha-git-credentials@v1
+          persist-credentials: false
 
-      - name: Doploy to GitHub Pages
-        uses: amitsingh-007/deploy-to-github-pages@v1.1
+      - name: Install 🔧
+        run: npm install
+
+      - name: Build 🏗️
+        run: npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
